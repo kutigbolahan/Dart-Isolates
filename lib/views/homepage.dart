@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:isolatesparsingjson/controllers/parse.dart';
 import 'package:isolatesparsingjson/models/model.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
+
 
 class HomePage extends StatelessWidget {
 
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         title: Text('Isolate parsing'),
       ),
       body: FutureBuilder<List<Photo>>(
-          future: fetchPhotos(http.Client()),
+          future:fetchPhotos(http.Client()),
           builder: (context, snapshot) {
             if (snapshot.hasError) print(snapshot.error);
             return snapshot.hasData
