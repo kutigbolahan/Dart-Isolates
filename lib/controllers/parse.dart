@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:isolatesparsingjson/models/model.dart';
 
-class Parse extends ChangeNotifier{
+//class Parse extends ChangeNotifier{
 
   Future<List<Photo>> fetchPhotos(http.Client client)async{
    
@@ -22,6 +22,5 @@ class Parse extends ChangeNotifier{
 
   return parsed.map<Photo>((json) => Photo.fromJson(json)).toList();
    }
-  notifyListeners();
+ 
 
-}
